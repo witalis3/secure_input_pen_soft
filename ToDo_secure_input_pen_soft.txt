@@ -1,0 +1,11 @@
+- źródła
+	- OLED https://github.com/STMicroelectronics/stm32-ssd1315/tree/main
+- uruchomienie OLED
+	- biblioteka?
+- obsługa guzików
+	- co mają robić?
+- LEDy
+- USB HID 
+- SD
+- opis funcjonalności
+	

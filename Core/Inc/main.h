@@ -59,6 +59,8 @@ void Error_Handler(void);
 /* Private defines -----------------------------------------------------------*/
 #define CS_Pin GPIO_PIN_0
 #define CS_GPIO_Port GPIOA
+#define SW5_TOUCH_Pin GPIO_PIN_5
+#define SW5_TOUCH_GPIO_Port GPIOA
 #define SW1_BOOT0_Pin GPIO_PIN_14
 #define SW1_BOOT0_GPIO_Port GPIOA
 #define SW4_BUTTON_Pin GPIO_PIN_15

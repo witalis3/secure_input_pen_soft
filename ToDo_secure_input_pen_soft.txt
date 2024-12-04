@@ -1,5 +1,7 @@
 - źródła
-	- OLED https://github.com/STMicroelectronics/stm32-ssd1315/tree/main
+	- OLED 
+		- https://community.particle.io/t/ssd-1315-with-ssd-1306-library/66547/2 można stosować driver SSD1306 do SSD1315
+		- driver OLED from https://github.com/KoenGilissen/STM32F432KC_SSD1306_I2C_driver/tree/master
 - uruchomienie OLED
 	- biblioteka?
 - obsługa guzików

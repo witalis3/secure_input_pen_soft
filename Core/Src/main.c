@@ -26,6 +26,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+// OLED
+#include "ssd1306.h"
 
 /* USER CODE END Includes */
 
@@ -36,6 +38,12 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
+// OLED begin
+#define SSD1306_USE_I2C
+#define __DEBUG 1
+#define BUFFERSIZE 100
+#define I2CBUF	12
+// OLED end
 
 /* USER CODE END PD */
 
@@ -47,6 +55,13 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
+// OLED begin:
+const uint8_t SSD1306_ADDRESS = 0x3C << 1;
+const uint8_t RANDOM_REG = 0x0F;
+char uartBuffer[BUFFERSIZE] = "";
+uint8_t I2CBuffer[I2CBUF] = {0};
+HAL_StatusTypeDef returnValue = 0;
+// OLED end
 
 /* USER CODE END PV */
 
@@ -95,6 +110,13 @@ int main(void)
   MX_USB_DRD_FS_PCD_Init();
   MX_ADC1_Init();
   /* USER CODE BEGIN 2 */
+  // OLED begin
+	ssd1306_Init();
+	ssd1306_Fill(Black);
+	ssd1306_SetCursor(0,26);
+	ssd1306_WriteString("secure input pen started.", Font_7x10, White);
+	ssd1306_UpdateScreen();
+	// OLED end
 
   /* USER CODE END 2 */
 
